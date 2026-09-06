@@ -4,7 +4,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: ref-adr-decision-platform
-  description: Web platform to author, list and version ADRs and RFCs with MADR, Nygard and Y-statement templates.
+  description: "Web platform to author, list and version ADRs and RFCs with MADR, Nygard and Y-statement templates."
   annotations:
     github.com/project-slug: fernando-moretes/ref-adr-decision-platform
     backstage.io/source-location: url:https://github.com/fernando-moretes/ref-adr-decision-platform
@@ -17,7 +17,9 @@ metadata:
       title: SonarQube
     - url: https://defectdojo.home.lab/product?name=ref-adr-decision-platform
       title: DefectDojo
-  tags: [documentation, ci-node.yml]
+  # tags so aceitam [a-z0-9-]: ci-node.yml (ci-node.yml) tem ponto e reprovava
+  # todo componente na policy check do Backstage.
+  tags: [documentation, node]
 spec:
   type: documentation
   lifecycle: experimental
