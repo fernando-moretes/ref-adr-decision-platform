@@ -1,0 +1,25 @@
+# Gerado por fernando-moretes/platform. Não edite aqui: mude no orquestrador e
+# rode `make rollout`. É o que o Backstage (backstage.home.lab) lê deste repo.
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ref-adr-decision-platform
+  description: Web platform to author, list and version ADRs and RFCs with MADR, Nygard and Y-statement templates.
+  annotations:
+    github.com/project-slug: fernando-moretes/ref-adr-decision-platform
+    backstage.io/source-location: url:https://github.com/fernando-moretes/ref-adr-decision-platform
+    sonarqube.org/project-key: ref-adr-decision-platform
+  links:
+    - url: https://github.com/fernando-moretes/ref-adr-decision-platform/actions
+      title: Actions
+      icon: github
+    - url: https://sonarqube.home.lab/dashboard?id=ref-adr-decision-platform
+      title: SonarQube
+    - url: https://defectdojo.home.lab/product?name=ref-adr-decision-platform
+      title: DefectDojo
+  tags: [documentation, ci-node.yml]
+spec:
+  type: documentation
+  lifecycle: experimental
+  owner: group:plataforma
+  system: homelab
