@@ -7,8 +7,12 @@ metadata:
   description: "Web platform to author, list and version ADRs and RFCs with MADR, Nygard and Y-statement templates."
   annotations:
     github.com/project-slug: fernando-moretes/ref-adr-decision-platform
-    backstage.io/source-location: url:https://github.com/fernando-moretes/ref-adr-decision-platform
+    # URL da arvore com barra final: e dela que o TechDocs resolve `dir:.`;
+    # sem a barra ele sobe um nivel e pede api.github.com/repos/<dono> (404).
+    backstage.io/source-location: url:https://github.com/fernando-moretes/ref-adr-decision-platform/tree/main/
     sonarqube.org/project-key: ref-adr-decision-platform
+    # TechDocs: mkdocs.yml + docs/ do proprio repositorio (rolados pelo platform)
+    backstage.io/techdocs-ref: dir:.
   links:
     - url: https://github.com/fernando-moretes/ref-adr-decision-platform/actions
       title: Actions
