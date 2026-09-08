@@ -7,12 +7,16 @@
  */
 workspace "ref-adr-decision-platform" "Web platform to author, list and version ADRs and RFCs with MADR, Nygard and Y-statement templates." {
 
+    configuration {
+        scope softwaresystem
+    }
+
     model {
         usuario = person "Usuário"
         sistema = softwareSystem "ref-adr-decision-platform" "Web platform to author, list and version ADRs and RFCs with MADR, Nygard and Y-statement templates." {
             app = container "Aplicação" "Descreva o que roda aqui" "ci-node.yml"
         }
-        usuario -> sistema.app "Usa"
+        usuario -> sistema.app "Usa" "HTTPS"
     }
 
     views {
@@ -25,9 +29,19 @@ workspace "ref-adr-decision-platform" "Web platform to author, list and version 
             autoLayout lr
         }
         styles {
-            element "Person" { shape person; background #08427b; color #ffffff }
-            element "Software System" { background #1168bd; color #ffffff }
-            element "Container" { background #438dd5; color #ffffff }
+            element "Person" {
+                shape person
+                background #08427b
+                color #ffffff
+            }
+            element "Software System" {
+                background #1168bd
+                color #ffffff
+            }
+            element "Container" {
+                background #438dd5
+                color #ffffff
+            }
         }
     }
 }
